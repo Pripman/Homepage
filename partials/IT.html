@@ -1,0 +1,22 @@
+<div class="container" ng-controller="sectionController" ng-init="initWith('IT')">
+    <ul class="nav nav-pills nav-justified">
+        <li ng-repeat="s in foundSections" ng-class="{active: isSelected(s)}"><a href="#/IT" ng-click="setSelected(s)">{{ s }}</a></li>
+    </ul>
+    
+    <div class="container">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Teknologi</th>
+            <th>Kommentar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="x in getSelectedSection()">
+            <td>{{ x.item}}</td>
+            <td>{{ x.comment}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+</div>
