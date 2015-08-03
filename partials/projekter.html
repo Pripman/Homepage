@@ -1,0 +1,33 @@
+<script>
+    function makeAnimation(){
+        $('.projectDescription').attr("style", "position:relative;");
+        $('.projectDescription').hide();
+        $('.projectDescription').slideDown();
+        $('.projectDescription').animate({left:'30'});
+    }
+    
+    $(".nav").click(function(){
+        makeAnimation();
+    });  
+
+    $(".projectDescription").hide();
+</script>
+
+<div class="container" ng-controller="sectionController" ng-init="initWith('projekter')">
+    <ul class="nav">
+        <li ng-repeat="s in foundSections" ng-class="{active: isSelected(s)}">
+            <a href="#/projekter" ng-click="setSelected(s)">{{ s }}</a>
+            <div ng-class="{hidden: !isSelected(s)}">
+                <div style="position:relative" class="projectDescription" class="container">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr ng-repeat="x in getSelectedSection()">
+                                <td style="">{{x.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
