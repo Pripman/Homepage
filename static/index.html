@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html ng-app="rasmusprip">
+    <head>
+        <meta charset="utf-8"/>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+
+        <title></title>
+    </head>
+    <body>
+        <div ng-controller="pageController">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li ng-repeat="p in pages"><a href="#/{{ p.url }}">{{ p.title}}</a></li>
+                    </ul> 
+                </div>
+            </nav>
+            <div ng-view></div>
+        </div>
+
+        
+        <!-- JQuery v.2 minified-->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <script src="angular.min.js"></script>
+        <script src="angular-route.js"></script> 
+        <!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script> -->
+        <script src="rasmuspripScript.js"></script>
+    </body>
+</html>
+
