@@ -9,7 +9,7 @@ rasmusprip.factory('pages', function(){
    addPage("Uddannelse", "uddannelse");
    addPage("Erhverserfaring", "erhverv");
    addPage("IT kundskaaber", "IT");
-   addPage("musik kundskaber", "musik");
+   addPage("Musik kundskaber", "musik");
    addPage("Større projekter", "projekter");
    addPage("Interesser", "interesser");
    addPage("Referencer", "referencer");
@@ -67,7 +67,7 @@ rasmusprip.factory('IT', function(){
     
     addItem("MySQL", "De fleste projekter jeg har været med i har brugt MySQL som database management system, og jeg har i den sammenhæng fået et godt kendskab til dette.", "Database");
     addItem("SQLight", "Har god erfaring med at bruge SQLight, i forbindelse med udvikling af smartphone apps. Det har hovedsaligt været med brug af SQLight.NET ORM.", "Database");
-    addItem("PostgreSQL", "På universitetet tog jeg kurset \textit{Database Systemer}, hvor det primære værktøj i lektionerne var PostgreSQL.", "Database");
+    addItem("PostgreSQL", "På universitetet tog jeg kurset Database Systemer, hvor det primære værktøj i lektionerne var PostgreSQL.", "Database");
     
     addItem("Versions kontrol", "Jeg har stor erfaring med Git. Jeg har i mange projekter arbejdet med commits, branches, staging mm. og har både profiler på github og bitbucket. Udover dette har jeg også arbejdet med Team foundation server i Visual Studio.", "Diverse");
     addItem("Virtuelle maskiner", "Har deltaget i et projekt, som omhandlede at køre virtuelle maskiner i en browser som en  web-service. I denne sammenhæng fik jeg god erfaring med virtualiserings værktøjer som VirtualBox, QUME, Libvirt mm.", "Diverse");
@@ -91,13 +91,29 @@ rasmusprip.factory('musik', function(){
     return items;
 });
 
-rasmusprip.factory('sectionDependency', ['IT', 'musik', function(IT, musik){
+rasmusprip.factory('projekter', function(){
+    var items = [];
+    var addItem = function(section, description){
+        items.push({"description": description, "section": section});
+    };
+
+    addItem("SSP Søg", "En Iphone app til Familie- og beskæftigelses afdelingen på Aalborg kommune. Det er et opslagsværk som omhandler indsatser i forbindelse med udsatte unge i Aalborg. Appen er en klient i en client-server arkitektur. Serveren indeholder alt data til opslagsværket, som kan redigeres fra en tilhørende hjemmeside.");
+    addItem("Actioncards", "En android app som henvender sig til ambulance personale. Det er et opslagsværk til medikamenter og nødhjælpsinstrukser, som ambulance personalet skal kende til. Appen er en klient i en client-server arkitektur. Serveren indeholder alt data til opslagsværket, som kan redigeres fra en tilhørende hjemmeside.");
+    addItem("Wuppaal", "Wuppaal - Model checking in a cloud based environment using a RESTful archite- cural style er et bachelor gruppe projekt som omhandler formel verifikation igennem model checking i skyen. Projektet blev udarbejdet som en implementation af sys- temet, og en artikel blev efterfølgende udarbejdet. Artiklen omhandler designet af Wuppaal, og en use-case som tager udgangspunkt i machine to machine(M2M) kommunikation med web-servicen.");
+    addItem("UniMachine", "Et gruppe projekt, som startede ud fra en ide om at tilbyde studerende på Aalborg universitet et distribueret arbejdsmiljø. Ofte kræver kurser at elever installerer software på deres computer, hvilket kan være problematisk grundet diverse kompat- ibilitets problemer. Løsningen består af en webservice, hvor undervisere kan lave virtuelle maskiner med den påkrævede software. De virtuelle maskiner er tilgængelig for eleverne igennem webservicen, og softwaren kan køres direkte i en internet browser.");
+    addItem("Record Based UPPAAL Typer", "Et gruppe projekt som omhandlede design af et programmerings sprog, og dertil- hørende compiler. Resultatet var sproget Record based UPPAAL typer(rbut), som er et sprog der er designet til at løse skeduleringsproblemer. Compileren kompilerer sproget til et filformat som kan læses af Model checking værktøjet UPPAAL, som kan give et bud på en skedulering af problemet.");
+    addItem("Hotel Manager", "Et gruppe projekt som havde useabillity og problem domænet i fokus. Vi fik kontakt med informant, som drev et hotel. Han var interesseret i et bedre og mere overskueligt system til at lave kunde-bookinger af hans værelser, samt andre aktiviteter som hotellet udbyder. I tæt samarbejde med ham, designede vi en hjemmeside, som muligjorde for både kunder og personale, at booke værelser og aktiviteter online.");
+    addItem("Diet-Planner", "Et gruppe projekt hvor objekt-orienteret programmering var i fokus. I løbet af projektet konstruerede vi et program til oprettelse af diæt planer for typisk unge studerende. Vi lavede en analyse af problemområdet, designede og implementerede en algoritme, som ud fra data som højde og vægt, sammensatte en diæt-plan ved brug af en database af opskrifter og råvare deklarationer.");
+    return items;
+});
+
+rasmusprip.factory('sectionDependency', ['IT', 'musik', "projekter", function(IT, musik, projekter){
     var items = {};
     items.IT = IT;
     items.musik = musik;
+    items.projekter = projekter;
     return items;
 }]);
-
 
 
 
