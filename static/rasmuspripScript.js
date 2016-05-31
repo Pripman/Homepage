@@ -135,13 +135,16 @@ rasmusprip.controller('sectionController', ['$scope', 'sectionDependency', funct
     console.log("sectionController - total Number of musik elements: " + sectionDependency.musik.length);
     
     $scope.foundSections = [];
-    var sections = [];
+    $scope.sectionsAndData = []
+    sections = [];
     var selected = "";
+    
 
     $scope.initWith = function(sectionType){
         
         console.log("sectionController getSections called with: " + sections);
         sections = sectionDependency[sectionType];
+        $scope.sectionsAndData = sectionDependency[sectionType];
         
         for(var i = 0; i < sections.length; i++){
             var sectionExist = $scope.foundSections.some(function(x){return sections[i].section === x});
@@ -176,6 +179,30 @@ rasmusprip.controller('sectionController', ['$scope', 'sectionDependency', funct
         var selectedSection = sections.filter(function(x){return x.section === selected});
         console.log("sectionController returned selected section: " + selectedSection);
         return selectedSection;
+    }
+    
+    $scope.select = function(tag, section){
+        
+        console.log("called select with: " + tag + " and section " + section);
+        var element = '#' + tag;
+        
+        
+        if($(element).is(':visible')){  
+            $(element).animate({left:'-=30'}, 300);
+            $(element).slideUp();
+            $scope.setSelected(section);
+
+            
+        }else{
+            $(element).attr("style", "position:relative;");
+            $(element).hide();
+            $(element).slideDown();
+            $(element).animate({left:'+=30'}, 300);
+
+        }
+        
+
+    
     }
 }]);
 
