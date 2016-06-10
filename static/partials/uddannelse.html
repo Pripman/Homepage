@@ -1,12 +1,15 @@
 
-<div class="container">
-<table class="table table-striped" ng-controller="uddannelseController">
+<div class="container card">
+    <div class="centerdiv">
+        <img src="education.jpg">
+    </div>
+<table align="center" class="table table" ng-controller="uddannelseController">
 <thead>
     <tr>
         <th>Fra/til</th>
         <th>Titel</th>
         <th>Sted</th>
-        <th>Bemærkning</th>
+<!--        <th>Bemærkning</th>-->
     </tr>
 </thead>
 <tbody>
@@ -14,8 +17,11 @@
         <td>{{ e.year }}</td>
         <td>{{ e.title}}</td>
         <td>{{ e.place}}</td>
-        <td>{{ e.remark}}</td>
+<!--        <td>{{ e.remark}}</td>-->
     </tr>
 </tbody>
 </table>
 </div>
+
+
+

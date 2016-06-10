@@ -1,22 +1,28 @@
 <div class="container">
-<table class="table table-striped" ng-controller="erhvervController">
-<thead>
-    <tr>
-        <th>Fra/til</th>
-        <th>Virksomhed</th>
-        <th>By</th>
-        <th>Stilling</th>
-    </tr>
-</thead>
-<tbody>
-    <tr ng-repeat="e in erhverv">
-        <td>{{ e.year }}</td>
-        <td>{{ e.place}}</td>
-        <td>{{ e.city}}</td>
-        <td>{{ e.remark}}</td>
-    </tr>
-</tbody>
-</table>
+
+    <div class="card">
+            <div class="centerdiv">
+        <img src="experience.jpg">
+    </div>
+        <table align="center" class="table table" ng-controller="erhvervController">
+        <thead>
+            <tr>
+                <th>Fra/til</th>
+                <th>Virksomhed</th>
+                <th>By</th>
+                <th>Stilling</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="e in erhverv">
+                <td>{{ e.year }}</td>
+                <td>{{ e.place}}</td>
+                <td>{{ e.city}}</td>
+                <td>{{ e.remark}}</td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
 </div>
 
 <!--2014--2015 Radubyte  Aalborg      udvikler applikationer til mobiltelefoner 

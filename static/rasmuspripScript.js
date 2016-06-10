@@ -1,4 +1,4 @@
-var rasmusprip = angular.module("rasmusprip", ['ngRoute']);
+var rasmusprip = angular.module("rasmusprip", ['ngRoute', 'ngAnimate']);
 
 
 rasmusprip.factory('pages', function(){
@@ -11,8 +11,8 @@ rasmusprip.factory('pages', function(){
    addPage("IT kundskaaber", "IT");
    addPage("Musik kundskaber", "musik");
    addPage("Større projekter", "projekter");
-   addPage("Interesser", "interesser");
-   addPage("Referencer", "referencer");
+//   addPage("Interesser", "interesser");
+//   addPage("Referencer", "referencer");
    addPage("Spil", "spil");
    return pagesList 
 });
@@ -22,13 +22,13 @@ rasmusprip.factory('erhverv', function(){
     var addItem = function(year, place, city, remark){
         items.push({"year":year, "place": place, "city": city, "remark": remark});
     };
-    addItem("2014--2015", "Radubyte", "Aalborg", "udvikler applikationer til mobiltelefoner");
-    addItem("2012--2013",  "Den Rytmiske i Nordkraft", "Aalborg", "Guitarlærer");
-    addItem("2011--2012", "Aalborg Kulturskole", "Aalborg", "Guitarlærer");
-    addItem("2009--nu",  "Partybandet Funky Monkeys", "Aalborg", "Guitarist");
-    addItem("2008--2009", "Tønder Musikskole", "Toftlund", "Guitarlærer");
+    addItem("2014 - 2015", "Radubyte", "Aalborg", "udvikler applikationer til mobiltelefoner");
+    addItem("2012 - 2013",  "Den Rytmiske i Nordkraft", "Aalborg", "Guitarlærer");
+    addItem("2011 - 2012", "Aalborg Kulturskole", "Aalborg", "Guitarlærer");
+    addItem("2009 - nu",  "Partybandet Funky Monkeys", "Aalborg", "Guitarist");
+    addItem("2008 - 2009", "Tønder Musikskole", "Toftlund", "Guitarlærer");
     addItem("2007", "Rejse", "New Zealand", "", "Rejse som backpacker");
-    addItem("2006--2007", "Post Danmark", "Haderslev", "Postomdeler");
+    addItem("2006 - 2007", "Post Danmark", "Haderslev", "Postomdeler");
     addItem("2006", "Føtex", "Haderslev", "Kasseassistent");
     return items;
 });
@@ -42,11 +42,11 @@ rasmusprip.factory('uddannelse', function(){
         items.push({"year":year, "title": title, "place": place, "remark": remark});
     };
     
-    addItem("2012--2015", "Bachelor i dataogi", "Aalborg Universitet", "");
-    addItem("2008--2011",  "Bachelor i musik", "Det Jyske Musikkonservatorium", "Rytmisk guitar og sammenspilsledelse");
+    addItem("2012 - 2015", "Bachelor i dataogi", "Aalborg Universitet", "");
+    addItem("2008 - 2011",  "Bachelor i musik", "Det Jyske Musikkonservatorium", "Rytmisk guitar og sammenspilsledelse");
     addItem("2005", "Musik & Teater Højskolen", "Toftlund", "Kursus i lydproduktion");
-    addItem("2004--2005",  "Musikalsk Grundkursus", "Vojens", "Forberedende kursus til musikkonservatoriet");
-    addItem("2000--2004", "Matematisk student", "Haderslev Katedralskole", "");
+    addItem("2004 - 2005",  "Musikalsk Grundkursus", "Vojens", "Forberedende kursus til musikkonservatoriet");
+    addItem("2000 - 2004", "Matematisk student", "Haderslev Katedralskole", "");
     return items;
 });
 
@@ -130,6 +130,9 @@ rasmusprip.controller('uddannelseController', ['$scope', 'uddannelse', function(
 }]);
 
 rasmusprip.controller('sectionController', ['$scope', 'sectionDependency', function($scope, sectionDependency){
+    
+        
+
     
     console.log("sectionController - total Number of IT elements: " + sectionDependency.IT.length);
     console.log("sectionController - total Number of musik elements: " + sectionDependency.musik.length);
@@ -216,5 +219,30 @@ rasmusprip.config(function($routeProvider){
        //         controller:'pageController'
             });
     }
+    console.log("partial selected...")
 });
+
+//rasmusprip.animation('cool-animation', ['$rootScope', function($rootScope) {
+//  return { 
+//    setup : function(element) {
+//      //this is called before the animation
+//      jQuery(element).css({
+//        'border-width':0
+//      }); 
+//    },
+//    start : function(element, done, memo) {
+//      //this is where the animation is expected to be run
+//      jQuery(element).animate({
+//        'border-width':20
+//      }, function() {
+//        //call done to close when the animation is complete
+//        done(); 
+//      });
+//    },
+//    cancel : function(element, done) {
+//      //this is called when another animation is started
+//      //whilst the previous animation is still chugging away
+//    }   
+//  };
+//}]);
 

@@ -1,11 +1,14 @@
 
 
-<div class="container" ng-controller="sectionController" ng-init="initWith('projekter')">
+<div class="container card" id="projectscard" ng-controller="sectionController" ng-init="initWith('projekter')">
+    <div class="centerdiv">
+        <img src="projects.jpg">
+    </div>
     <ul class="nav">
         <li ng-class="{active: isSelected(s.section)}" ng-repeat="s in sectionsAndData">
-            <div  class="container">
-                <a class="btn btn-primary" style="width:250px;margin-bottom:10px" ng-click="select($index, s.section)">{{ s.section }}</a>
-                <div>
+            <div  class="list-group projectstext">
+                <a style="width:250px;margin-bottom:10px" ng-click="select($index, s.section)">{{ s.section }}</a>
+                <div class="projectstext">
                     <p hidden id="{{ $index }}" style="position:relative">{{ s.description }}</p>
                 </div>
             </div>
