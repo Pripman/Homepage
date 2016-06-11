@@ -38,7 +38,6 @@ img{
 .centerdiv{
     text-align: center;
     background-color: #f4f4f4;
-    background: #DFDED4;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     margin-bottom: 30px;
@@ -95,23 +94,6 @@ img{
 
 
 
-#abouttext{
-    color:#432F21;
-    padding-left: 5px;
-    background: #CDCAB9;
-    margin-right: 30px;
-    margin-left: 20px;
-}
-
-#abouttext p{
-    padding-right: 35px;
-    
-}
-#rasmuspic{
-    max-width: 400px;
-    background: #DFDED4;
-    
-}
 
 
 
@@ -237,11 +219,6 @@ color: #CA171B;
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: #CA171B;
-}
-
-
-.slide{
-    margin: 20px;
 }
 
 

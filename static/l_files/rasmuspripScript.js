@@ -244,9 +244,9 @@ rasmusprip.controller("homeController", ["$scope", "about", function($scope, abo
         console.log('animating the about text');
             $(element).attr("style", "position:relative;");
             $(element).hide();
-            $(element).delay(800);
+            $(element).delay(500);
             $(element).slideDown();
-            $(element).animate({left:'+=30'}, 500);
+            $(element).animate({left:'+=30'}, 300);
     }
 }]);
 
