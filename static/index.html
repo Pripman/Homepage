@@ -36,7 +36,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 
                         <ul class="nav navbar-nav">
-                            <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.in" ng-repeat="p in pages"><a data-toggle="collapse " class="navbaritem" href="#/{{ p.url }}" tabindex="$index">{{ p.title}}</a></li>
+                            <li data-toggle="collapse" ng-class="{isSelected(s)}" data-target="#bs-example-navbar-collapse-1.in" ng-repeat="p in pages"><a ng-click="setSelected(s)" data-toggle="collapse " class="navbaritem" href="#/{{ p.url }}" tabindex="$index">{{ p.title}}</a></li>
                         </ul>
                     </div>
                 </div>
