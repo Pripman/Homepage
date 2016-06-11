@@ -6,8 +6,8 @@
     </div>
     <ul class="nav">
         <li ng-class="{active: isSelected(s.section)}" ng-repeat="s in sectionsAndData">
-            <div  class="list-group projectstext">
-                <a style="width:250px;margin-bottom:10px" ng-click="select($index, s.section)">{{ s.section }}</a>
+            <div  class="list-group projectstext" ng-click="select($index, s.section)">
+                <a style="width:250px;margin-bottom:10px" >{{ s.section }}</a>
                 <div class="projectstext">
                     <p hidden id="{{ $index }}" style="position:relative">{{ s.description }}</p>
                 </div>

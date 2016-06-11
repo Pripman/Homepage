@@ -7,18 +7,18 @@
         <table align="center" class="table table" ng-controller="erhvervController">
         <thead>
             <tr>
-                <th>Fra/til</th>
+<!--                <th>Fra/til</th>-->
                 <th>Virksomhed</th>
-                <th>By</th>
+<!--                <th>By</th>-->
                 <th>Stilling</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="e in erhverv">
-                <td>{{ e.year }}</td>
-                <td>{{ e.place}}</td>
-                <td>{{ e.city}}</td>
-                <td>{{ e.remark}}</td>
+<!--                <td>{{ e.year }}</td>-->
+                <td>{{ e.place}} </td>
+<!--                <td>{{ e.city}}</td>-->
+                <td>{{ e.remark}} <br> ({{ e.year }})</td>
             </tr>
         </tbody>
         </table>
