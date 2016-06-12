@@ -127,8 +127,9 @@ rasmusprip.factory('sectionDependency', ['IT', 'musik', "projekter", function(IT
 
 rasmusprip.controller('pageController', ['$scope', "pages", function($scope, pages){
     $scope.pages = pages;
+    var selected = "";
     $scope.setSelected = function(s){
-        console.log("setting selected tab to: " + s)
+        console.log("setting selected nav item to: " + s)
         selected = s; 
     } 
 
@@ -136,10 +137,10 @@ rasmusprip.controller('pageController', ['$scope', "pages", function($scope, pag
         console.log("sectionController isSelected called with : " + s);
 
         if(selected === s){
-            return 'colorred';
+            return 'selectednav';
         }
         else{
-            return '';
+            return 'navbaritem';
         }
     }
 

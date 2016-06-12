@@ -9,7 +9,10 @@
             <div  class="list-group projectstext" ng-click="select($index, s.section)">
                 <a><b>{{ s.section }}</b></a>
                 <div class="projectstext">
-                    <p hidden id="{{ $index }}" style="position:relative">{{ s.description }}</p>
+                    <div hidden id="{{ $index }}" style="position:relative">
+                        <hr class="redline">
+                        <p>{{ s.description }}</p>
+                    </div>
                 </div>
             </div>
         </li>
