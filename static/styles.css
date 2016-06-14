@@ -23,6 +23,7 @@ img{
     box-shadow: 2px 10px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 6px;
     max-width: 95%;
+    margin-bottom: 60px;
     
 }
 
@@ -218,9 +219,11 @@ img{
     background: #CDCAB9;
 }
 
+
+
 .navbar .navbar-brand:focus,
 .navbar .navbar-brand:hover,
-.navbar .navbar-brand,
+.navbar .navbar-brand,  
 .navbar .navbar-brand > a:focus,
 .navbar .navbar-brand > a:hover,
 .navbar .navbar-brand > a
@@ -267,6 +270,19 @@ color: #CA171B;
     height: 2px;
 }
 
+.footer{
+    background: #432F21;
+        position:fixed;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    
+}
+
+.footer a{
+    font-size: 0.7em;
+    color:#DFDED4;
+}
 
 #CDCAB9
 #D6D3C4

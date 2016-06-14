@@ -22,12 +22,13 @@ rasmusprip.factory('erhverv', function(){
     var addItem = function(year, place, city, remark){
         items.push({"year":year, "place": place, "city": city, "remark": remark});
     };
-    addItem("2014 - 2015", "Radubyte", "Aalborg", "udvikler applikationer til mobiltelefoner");
+    addItem("2015 - nu", "NBE PRODUCTION A/S", "Sæby", "Android applikationsudvikler");
+    addItem("2014 - 2015", "Radubyte", "Aalborg", "Mobil applikationsudvikler");
     addItem("2012 - 2013",  "Den Rytmiske i Nordkraft", "Aalborg", "Guitarlærer");
     addItem("2011 - 2012", "Aalborg Kulturskole", "Aalborg", "Guitarlærer");
     addItem("2009 - nu",  "Partybandet Funky Monkeys", "Aalborg", "Guitarist");
     addItem("2008 - 2009", "Tønder Musikskole", "Toftlund", "Guitarlærer");
-    addItem("2007", "Rejse", "New Zealand", "", "Rejse som backpacker");
+    addItem("2007", "Rejse", "New Zealand", "Rejse som backpacker", "Rejse som backpacker");
     addItem("2006 - 2007", "Post Danmark", "Haderslev", "Postomdeler");
     addItem("2006", "Føtex", "Haderslev", "Kasseassistent");
     return items;
@@ -63,12 +64,14 @@ rasmusprip.factory('IT', function(){
     var addItem = function(item, comment, section){
         items.push({"item":item, "comment": comment, "section": section});
     };
+        addItem("Java", "I mit hverv som android udvikler, har jeg god erfaring med Java og Androids SDK. Desuden har jeg deltaget i et projekt der omhandlede design af et programmerings sprog samt dertilhørende compiler, ved brug af frameworket SableCC.", "Sprog");
     addItem("C#", "Jeg har stor erfaring med sproget. Jeg har blandt andet lavet projekter i Visual Studio, og udviklet mobil apps til både Android og Iphone med Xamarin", "Sprog");
-    addItem("Python", "Flere af de projekter jeg var en del af under mit uddannelsesforløb, omhandlede udvikling af distribueret systemer. Jeg har i denne sammenhæng arbejdet en del med sproget, og særligt frameworket Flask til opsætning af http services.", "Sprog");
+    addItem("Python", "Flere af de projekter jeg var en del af under mit uddannelsesforløb, omhandlede udvikling af distribuerede systemer. Jeg har i denne sammenhæng arbejdet en del med sproget, og særligt frameworket Flask til opsætning af http services.", "Sprog");
     addItem("C", "Under mit uddannelses forløb har jeg i mange sammenhænge arbejdet med sproget. Jeg har blandt andet lavet implementationer af diverse klassiske sorterings algoritmer.", "Sprog");
     addItem("JavaScript", "I diverse sammenhænge har jeg brugt javascript. Jeg har blandt andet lavet et lille spil, der kører i en web-browser ved brug af et html5 canvas element. Udover dette har jeg også lavet små hjemmesider i AngularJS frameworket.", "Sprog");
-    addItem("Java", "Jeg har været en del af et projekt hvor vi designede et programmerings sprog. Her var jeg med til at implementere en compiler i Java, ved brug af frameworket SableCC.", "Sprog");
 
+
+    addItem("Android Studio", "Android Studio er mit foretrukne værktøj i forbindelse med Android udvikling. Her har jeg et flydende workflow med debugging, emulatorer, unit tests mm.", "IDE/Text editor");
     addItem("Visual Studio", "Jeg har i forbindelse med programmering i C\# udviklet meget i visual studio. Jeg har stiftet bekendtskab med ASP.NET MVC, Web-forms, Windows-forms, team foundation server og mm.", "IDE/Text editor");
     addItem("Xamarin Studio", "Jeg har et samarbejde med to andre programmører, hvor jeg udvikler apps til Mobil telefoner. Her udvikler jeg hovedsaligt i Xamarin Studio, hvor jeg har erfaringer med både Android og Iphone, Men også cross-platform moduler.", "IDE/Text editor");
     addItem("Vim", "Jeg har et stort kendskab og et godt workflow i text editoren Vim. Det har været til stor gavn i tekst baseret miljøer hvor der ikke er grafisk brugergrænseflade til rådighed.", "IDE/Text editor");
